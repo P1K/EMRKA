@@ -31,7 +31,7 @@ uint64_t p64(uint64_t x)
 	for (int i = 0; i < 32; i++)
 	{
 	   MIX(hi, lo, rcon[i % 8]);
-	   lo += 1;
+	   lo += i;
 	}
 
 	return ((((uint64_t)hi) << 32) ^ lo);
